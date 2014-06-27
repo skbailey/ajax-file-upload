@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  form#myform(action="/photos", enctype="multipart/form-data", method="post")
+    input#file(name="image", type="file")
+    input(type="submit", value="Submit")
+
+  script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js")
+  script(src="/javascripts/main.js")
